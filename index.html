@@ -1,0 +1,298 @@
+<html lang="uz"><head><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kuyov navkar taklifnomasi — kuyov navkar marosimiga marhamat">
+  <title data-i18n="pageTitle">Xusan &amp; Ominaxon </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__backdrop" id="navBackdrop"></div>
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">X &amp; O</a>
+
+      <div class="nav__right">
+        
+
+        <button class="nav__toggle" id="navToggle" aria-label="Menyuni ochish" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#invitation" data-i18n="navTaklif">Taklif</a></li>
+        <li><a href="#calendar" data-i18n="navTaqvim">Taqvim</a></li>
+        <li><a href="#location" data-i18n="navManzil">Manzil</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__badge" data-i18n="heroBadge">To'y</p>
+      <h1 class="hero__names">Xusan<span class="hero__amp">&amp;</span>Ominaxon</h1>
+      <p class="hero__date" data-i18n="heroDate">2026-yil 19-oktabr</p>
+      <p class="hero__time" data-i18n="heroTime">Soat 18:00</p>
+      <a href="#invitation" class="btn btn--primary" data-i18n="heroBtn">Taklifnomani o'qish</a>
+    </div>
+    <div class="hero__scroll">
+      <span data-i18n="heroScroll">Pastga</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </header>
+
+  <section class="invitation" id="invitation">
+    <div class="container">
+      <div class="invitation__inner fade-in visible">
+        <p class="section-label" data-i18n="invLabel">To'y taklifnomasi</p>
+        <h2 class="section-title" data-i18n="invTitle">Hurmatli mehmon!</h2>
+        <div class="invitation__text">
+          <p data-i18n="invP1">Farzandimiz Xusanning to'y tantanasi munosabati bilan to'yga sizni samimiy taklif qilamiz.</p>
+          <p data-i18n="invP2">To'yhonaga marhamat! Dasturxonimiz tayyor, joyimiz munavvar. Sizning kelishingiz bizga sharaf va quvonch bag'ishlaydi.</p>
+          <p data-i18n="invP3">To'yni yaqinlarimiz davrasida birga nishonlaymiz. Sizni chin dildan kutamiz!</p>
+          <p class="invitation__closing" data-i18n="invClosing">Hurmat ila —  ixsivoy hoji ota ogʻli Rustam Ortiqovlar oilasi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="navkar-feature" id="navkar-feature">
+    <div class="container">
+      <div class="navkar-feature__grid">
+        <div class="navkar-feature__card fade-in visible">
+          <span class="navkar-feature__emoji">💍</span>
+          <h3 class="navkar-feature__title" data-i18n="featHome">To'yhonada</h3>
+          <p class="navkar-feature__desc" data-i18n="featHomeDesc">Mehmonlar davrasida</p>
+        </div>
+        <div class="navkar-feature__card fade-in visible">
+          <span class="navkar-feature__emoji">⏰</span>
+          <h3 class="navkar-feature__title" data-i18n="featTime">Soat 18:00</h3>
+          <p class="navkar-feature__desc" data-i18n="featTimeDesc">To'y boshlanish vaqti</p>
+        </div>
+        <div class="navkar-feature__card fade-in visible">
+          <span class="navkar-feature__emoji">🤝</span>
+          <h3 class="navkar-feature__title" data-i18n="featTogether">Birga</h3>
+          <p class="navkar-feature__desc" data-i18n="featTogetherDesc">Yaqinlar davrasida</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calendar-section" id="calendar">
+    <div class="container">
+      <p class="section-label" data-i18n="calLabel">To'y sanasi</p>
+      <h2 class="section-title" data-i18n="calTitle">19-Oktabr 2026 </h2>
+      
+    </div>
+  </section>
+
+  <section class="countdown" aria-label="Navkar kunigacha qolgan vaqt">
+    <div class="container">
+      <p class="section-label" data-i18n="countLabel">To'y kunigacha</p>
+      <div class="countdown__grid fade-in visible" id="countdown">
+        <div class="countdown__item">
+          <span class="countdown__number" id="days">25</span>
+          <span class="countdown__label" data-i18n="days">Kun</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="hours">21</span>
+          <span class="countdown__label" data-i18n="hours">Soat</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="minutes">26</span>
+          <span class="countdown__label" data-i18n="minutes">Daqiqa</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="seconds">28</span>
+          <span class="countdown__label" data-i18n="seconds">Soniya</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  // 19-oktyabr, 18:00 ga sozlangan sana
+  const targetDate = new Date('2026-10-19T18:00:00').getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = days < 10 ? '0' + days : days;
+      document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+      document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+    } else {
+      document.getElementById('days').textContent = '00';
+      document.getElementById('hours').textContent = '00';
+      document.getElementById('minutes').textContent = '00';
+      document.getElementById('seconds').textContent = '00';
+    }
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+  <section class="location-section" id="location">
+    <div class="container">
+      <p class="section-label section-label--light" data-i18n="locLabel">Manzil</p>
+      <h2 class="section-title section-title--light" data-i18n="locTitle">Kuyovning Manzili </h2>
+
+      <div class="location-card fade-in visible">
+        <div class="location-card__icon">📍</div>
+        <h3 class="location-card__name" data-i18n="locName">Kuyovning Manzili </h3>
+        <p class="location-card__address" data-i18n-html="locAddress">Uchtepa tumani <br>Tong mahalasi 9 </p>
+
+        <div class="location-card__buttons">
+          <a href="https://yandex.uz/maps/org/choyxona_shuhrat/14392938844/?ll=69.224858%2C41.289040&amp;z=17.25" class="btn btn--map btn--yandex" target="_blank" rel="noopener noreferrer" data-i18n="btnYandex">Yandex Xaritalar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <section class="location-section" id="location">
+    <div class="container">
+      <p class="section-label section-label--light" data-i18n="locLabel">Manzil</p>
+      <h2 class="section-title section-title--light" data-i18n="locTitle">To'yhona manzili</h2>
+
+      <div class="location-card fade-in visible">
+        <div class="location-card__icon">📍</div>
+        <h3 class="location-card__name" data-i18n="locName">To'yhona manzili</h3>
+        <p class="location-card__address" data-i18n-html="locAddress">Chilonzor tumani<br>Muqimiy 41/3</p>
+
+        <div class="location-card__buttons">
+          <a href="https://yandex.uz/maps/org/choyxona_shuhrat/14392938844/?ll=69.224858%2C41.289040&amp;z=17.25" class="btn btn--map btn--yandex" target="_blank" rel="noopener noreferrer" data-i18n="btnYandex">Yandex Xaritalar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__names">Xusan &amp; Ominaxon</p>
+      <p class="footer__date" data-i18n="footerDate">19-oktabr, 2026</p>
+      
+      <p class="footer__credit">
+        
+      </p>
+    </div>
+  </footer>
+
+  <!-- Background Music Element (same as index.html) -->
+  <audio id="bgMusic" src="audio/music.mp3" loop="" preload="auto" playsinline="" webkit-playsinline="" data-vb-original-volume="1"></audio>
+
+  <!-- Floating Music Toggle Button -->
+  <button class="music-toggle" id="musicToggle" aria-label="Musiqa" title="Musiqa">
+    <span class="music-toggle__icon" id="musicIcon">🎵</span>
+    <span class="music-toggle__waves" id="musicWaves">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+
+  <script src="script.js"></script>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
