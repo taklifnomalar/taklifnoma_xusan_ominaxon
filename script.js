@@ -138,8 +138,8 @@
   var bgMusic = document.getElementById('bgMusic');
   var musicToggle = document.getElementById('musicToggle');
 
-  var musicStarted = false;
-  var bgMusicFailed = false;
+  var musicStarted = true;
+  var bgMusicFailed = true;
 
   // Pre-load the audio element for mobile
   if (bgMusic) {
@@ -156,7 +156,7 @@
       return;
     }
 
-    bgMusic.volume = 0.35;
+    bgMusic.volume = 100;
     bgMusic.muted = false;
     var playPromise = bgMusic.play();
 
@@ -220,6 +220,31 @@
     }
   }
 
+
+  // Audio obyektini yaratamiz
+const audio = new Audio('music.mp3');
+audio.loop = true;
+
+function playAudio() {
+  audio.play().then(() => {
+    console.log("Musiqa muvaffaqiyatli chalindi!");
+  }).catch(error => {
+    console.log("Xatolik yuz berdi:", error);
+  });
+}
+
+// Sichqonchani bosganda yoki ekranga tegganda yoqish
+window.addEventListener('click', playAudio, { once: true });
+window.addEventListener('touchstart', playAudio, { once: true });
+
+  window.addEventListener('click', function() {
+  const audio = document.getElementById('bgMusic');
+  if (audio && audio.paused) {
+    audio.play().catch(function(error) {
+      console.log("Audio play error:", error);
+    });
+  }
+}, { once: true });
   // Navigation Logic
   const nav = document.getElementById('nav');
   const navToggle = document.getElementById('navToggle');
