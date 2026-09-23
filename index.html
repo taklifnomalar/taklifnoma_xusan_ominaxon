@@ -4,6 +4,8 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -108,15 +110,15 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           <span class="countdown__label" data-i18n="days">Kun</span>
         </div>
         <div class="countdown__item">
-          <span class="countdown__number" id="hours">21</span>
+          <span class="countdown__number" id="hours">19</span>
           <span class="countdown__label" data-i18n="hours">Soat</span>
         </div>
         <div class="countdown__item">
-          <span class="countdown__number" id="minutes">26</span>
+          <span class="countdown__number" id="minutes">22</span>
           <span class="countdown__label" data-i18n="minutes">Daqiqa</span>
         </div>
         <div class="countdown__item">
-          <span class="countdown__number" id="seconds">28</span>
+          <span class="countdown__number" id="seconds">52</span>
           <span class="countdown__label" data-i18n="seconds">Soniya</span>
         </div>
       </div>
@@ -201,19 +203,129 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     </div>
   </footer>
 
-  <!-- Background Music Element (same as index.html) -->
-  <audio id="bgMusic" src="audio/music.mp3" loop="" preload="auto" playsinline="" webkit-playsinline="" data-vb-original-volume="1"></audio>
+ 
+    <!-- Floating Music Toggle Button -->
+  
 
-  <!-- Floating Music Toggle Button -->
-  <button class="music-toggle" id="musicToggle" aria-label="Musiqa" title="Musiqa">
-    <span class="music-toggle__icon" id="musicIcon">🎵</span>
-    <span class="music-toggle__waves" id="musicWaves">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
-  </button>
+  <!-- Musiqa fayli -->
+<audio id="bgMusic" loop="" data-vb-original-volume="1">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
+<<!-- 1. Musiqa fayli -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 1. Audio element -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 2. Konvert (Overlay) ekrani -->
+<div id="welcomeScreen">
+  <div class="envelope-box" onclick="openInvitation()">
+    <div class="envelope-icon">✉️</div>
+    <h2>Xusan & Ominaxon</h2>
+    <p>Taklifnomani ochish uchun bosing</p>
+  </div>
+</div>
+
+<!-- 3. Konvert uslubi va animatsiyasi -->
+<style>
+  #welcomeScreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.92) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 999999 !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+  }
+
+  /* Yo'qolish animatsiyasi klassi */
+  #welcomeScreen.fade-out {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  .envelope-box {
+    padding: 35px 45px;
+    border: 2px solid #d4af37;
+    border-radius: 16px;
+    background: #141414;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease;
+  }
+
+  .envelope-box:active {
+    transform: scale(0.95);
+  }
+
+  .envelope-icon {
+    font-size: 60px;
+    margin-bottom: 12px;
+  }
+
+  .envelope-box h2 {
+    color: #d4af37;
+    font-size: 24px;
+    margin: 8px 0;
+  }
+
+  .envelope-box p {
+    font-size: 14px;
+    color: #dddddd;
+  }
+</style>
+
+<!-- 4. Konvertni yo'qotib, musiqani yoqish kodi -->
+<script>
+  function openInvitation() {
+    // Musiqani ijro etish
+    const music = document.getElementById('bgMusic');
+    if (music) {
+      music.play().catch(err => console.log("Music play error:", err));
+    }
+
+    // Konvert ekraniga yo'qolish efekti berish
+    const screen = document.getElementById('welcomeScreen');
+    if (screen) {
+      screen.classList.add('fade-out');
+      
+      // Animatsiya tugagach ekrandan to'liq olib tashlash
+      setTimeout(() => {
+        screen.style.display = 'none';
+      }, 800);
+    }
+  }
+</script>
+
+  function playAudio() {
+    const audio = document.getElementById('bgMusic');
+    if (audio) {
+      audio.play().then(() =&gt; {
+        console.log("Musiqa ijro etilmoqda!");
+      }).catch(error =&gt; {
+        console.log("Ovozni yoqishda xato:", error);
+      });
+    }
+  }
+
+  // Sahifaning xohlagan joyiga bir marta bosilganda musiqani chalish
+  window.addEventListener('click', playAudio, { once: true });
+  window.addEventListener('touchstart', playAudio, { once: true });
+
+
+  
   <script src="script.js"></script>
 
 
@@ -295,4 +407,81 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 	}
 	// ]]>
 </script>
+
+<script>
+  function playAudio() {
+    const audio = document.getElementById('bgMusic');
+    if (audio) {
+      audio.play().then(() => {
+        console.log("Musiqa chalindi!");
+      }).catch(error => {
+        console.log("Ovozni yoqishda xato:", error);
+      });
+    }
+  }
+
+  // Sahifaning xohlagan joyiga birinchi marta bosilganda musiqani chalish
+  window.addEventListener('click', playAudio, { once: true });
+  window.addEventListener('touchstart', playAudio, { once: true });
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<!-- Barcha HTML kontentlar va </body> tegidan oldin -->
+
+<script>
+  function playAudio() {
+    const audio = document.getElementById('bgMusic');
+    if (audio) {
+      audio.play().then(() => {
+        console.log("Musiqa ijro etilmoqda!");
+      }).catch(error => {
+        console.log("Ovozni yoqishda xato:", error);
+      });
+    }
+  }
+
+  // Sahifaning xohlagan joyiga bir marta bosilganda musiqani chalish
+  window.addEventListener('click', playAudio, { once: true });
+  window.addEventListener('touchstart', playAudio, { once: true });
+</script>
+
+</body>
+
 </body></html>
